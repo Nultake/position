@@ -10,7 +10,7 @@ Route::prefix("/position")
     ->group(function () {
         Route::get("/", Position\ListController::class)->name("list");
         Route::post("/", Position\CreateController::class)->name("create");
-        Route::get("/routing", Position\RoutingController::class)->name("routing");
+        Route::post("/routing", Position\RoutingController::class)->name("routing");
 
         Route::prefix("/{id}")
             ->whereUuid("id")
