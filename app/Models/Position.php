@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -16,7 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Position extends Model
 {
-    use HasUuids;
+    use HasUuids,
+        HasFactory;
 
     /**
      * The attributes that should be cast to native types.
